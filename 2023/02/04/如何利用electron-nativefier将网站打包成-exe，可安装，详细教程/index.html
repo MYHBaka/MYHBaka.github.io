@@ -1,0 +1,662 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/myh1.png">
+  <link rel="icon" href="/img/myh1.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="MyhOfficial">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="第一步【Node.js】Node.js安装及环境配置Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 Node.js 使用了一个事件驱动、非阻塞式 I&#x2F;O 的模型，使其轻量又高效。 ## 第一步骤：下载node.js第一步：到node官网下载node.js1、下载官网推荐的版本，网址：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何利用electron-nativefier将网站打包成.exe，可安装，详细教程">
+<meta property="og:url" content="http://example.com/2023/02/04/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8electron-nativefier%E5%B0%86%E7%BD%91%E7%AB%99%E6%89%93%E5%8C%85%E6%88%90-exe%EF%BC%8C%E5%8F%AF%E5%AE%89%E8%A3%85%EF%BC%8C%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="莫云鹤Official博客">
+<meta property="og:description" content="第一步【Node.js】Node.js安装及环境配置Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 Node.js 使用了一个事件驱动、非阻塞式 I&#x2F;O 的模型，使其轻量又高效。 ## 第一步骤：下载node.js第一步：到node官网下载node.js1、下载官网推荐的版本，网址：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;这">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675520982307/45b639fd-e1c1-4860-97c5-7b6cf2c45251.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675520998067/56a67e61-6bd8-4f80-a811-4b06b26f6b06.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521009901/7442a7d6-697a-4980-a126-8ab290bd2718.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521022007/4f08eb56-4d70-4649-b485-b5108a2b4316.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521041689/QQ%E6%88%AA%E5%9B%BE20230204221339.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521079032/QQ%E6%88%AA%E5%9B%BE20230204221440.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521098480/QQ%E6%88%AA%E5%9B%BE20230204221454%201.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521112965/QQ%E6%88%AA%E5%9B%BE20230204221807.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521128630/QQ%E6%88%AA%E5%9B%BE20230204221940.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521145137/202206190045926.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521160217/QQ%E6%88%AA%E5%9B%BE20230204222428.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521171778/202206190049597.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521187269/QQ%E6%88%AA%E5%9B%BE20230204222623.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521205438/QQ%E6%88%AA%E5%9B%BE20230204222701.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521219084/202206190108072.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521230828/202206190110710.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521253641/QQ%E6%88%AA%E5%9B%BE20230204222814.png">
+<meta property="og:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521267259/QQ%E6%88%AA%E5%9B%BE20230204222829.png">
+<meta property="article:published_time" content="2023-02-04T14:36:41.000Z">
+<meta property="article:modified_time" content="2023-02-04T14:38:39.167Z">
+<meta property="article:author" content="MyhOfficial">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675520982307/45b639fd-e1c1-4860-97c5-7b6cf2c45251.png">
+  
+  
+  
+  <title>如何利用electron-nativefier将网站打包成.exe，可安装，详细教程 - 莫云鹤Official博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>莫云鹤Official</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/IMG2.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="如何利用electron-nativefier将网站打包成.exe，可安装，详细教程"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-02-04 22:36" pubdate>
+          February 4, 2023 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">如何利用electron-nativefier将网站打包成.exe，可安装，详细教程</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="第一步【Node-js】Node-js安装及环境配置"><a href="#第一步【Node-js】Node-js安装及环境配置" class="headerlink" title="第一步【Node.js】Node.js安装及环境配置"></a>第一步【Node.js】Node.js安装及环境配置</h1><p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 Node.js 使用了一个事件驱动、非阻塞式 I&#x2F;O 的模型，使其轻量又高效。</p>
+<h2 id="第一步骤：下载node-js"><a href="#第一步骤：下载node-js" class="headerlink" title="## 第一步骤：下载node.js"></a>## 第一步骤：下载node.js</h2><p><strong>第一步</strong>：到node官网下载node.js<br>1、下载官网推荐的版本，网址：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a><br>这样下载的就是官网的最新版<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675520982307/45b639fd-e1c1-4860-97c5-7b6cf2c45251.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="第二步骤：安装node-js"><a href="#第二步骤：安装node-js" class="headerlink" title="第二步骤：安装node.js"></a>第二步骤：安装node.js</h2><p><strong>第一步</strong>：开始安装。 1、下载完成后，双击“node-v18.12.1-x64.msi”，开始安装Node.js</p>
+<p><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675520998067/56a67e61-6bd8-4f80-a811-4b06b26f6b06.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>第二步</strong>：点击【Next】按钮</p>
+<p><strong>第三步</strong>：这里默认就行，点击【Next】按钮。<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521009901/7442a7d6-697a-4980-a126-8ab290bd2718.png" srcset="/img/loading.gif" lazyload><br><strong>第五步</strong>：安装完后点击【Finish】按钮完成安装<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521022007/4f08eb56-4d70-4649-b485-b5108a2b4316.png" srcset="/img/loading.gif" lazyload><br><strong>第六步</strong>：测试。</p>
+<p>检验安装是否成功，cmd命令输入如下命令，出现nodejs的版本号，说明安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markup">npm -v<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markup">node -v<br></code></pre></td></tr></table></figure>
+<p>1、至此Node.js已经安装完成，可以先进行下简单的测试安装是否成功了，后面还要进行环境配置<br>2、在键盘按下【win+R】键，输入cmd，然后回车，打开cmd窗口</p>
+<p>3、安装完后的目录如下图所示</p>
+<p>4、此处说明下：新版的Node.js已自带npm，安装Node.js时会一起安装，npm的作用就是对Node.js依赖的包进行管理，也可以理解为用来安装&#x2F;卸载Node.js需要装的东西</p>
+<h1 id="2、第二步【打包】安装nativefier与electron"><a href="#2、第二步【打包】安装nativefier与electron" class="headerlink" title="2、第二步【打包】安装nativefier与electron"></a>2、第二步【打包】安装nativefier与electron</h1><h3 id="1，输入以下命令进行安装"><a href="#1，输入以下命令进行安装" class="headerlink" title="1，输入以下命令进行安装"></a>1，输入以下命令进行安装</h3><p>安装nativefier</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markup">npm install nativefier -g<br></code></pre></td></tr></table></figure>
+
+<p>第一次打包需要下载 Eletron 框架, 很慢, 要有耐心…… </p>
+<h3 id="2、打包网站"><a href="#2、打包网站" class="headerlink" title="2、打包网站"></a>2、打包网站</h3><p>在电脑任意位置新建一个文件夹，命名建议为英文，！！！名字不要带有空格！！！</p>
+<p><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521041689/QQ%E6%88%AA%E5%9B%BE20230204221339.png" srcset="/img/loading.gif" lazyload><br>点击空白的地方<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521079032/QQ%E6%88%AA%E5%9B%BE20230204221440.png" srcset="/img/loading.gif" lazyload><br>将这串字符改为cmd<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521098480/QQ%E6%88%AA%E5%9B%BE20230204221454%201.png" srcset="/img/loading.gif" lazyload><br>回车，进入cmd<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521112965/QQ%E6%88%AA%E5%9B%BE20230204221807.png" srcset="/img/loading.gif" lazyload><br>输入以下指令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markup">nativefier --name &quot;莫云鹤Official的博客&quot; &quot;https://myhbaka.github.io&quot;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markup">nativefier --name 莫云鹤Official的博客 --icon ./logo.ico https://myhbaka.github.io<br></code></pre></td></tr></table></figure>
+
+<p>注意： .&#x2F;logo.ico是你的图标文件的绝对路径<br>如果不加–icon .&#x2F;logo.ico便会自动抓取网站的logo，抓取不到便使用默认样式</p>
+<p>nativefier –name “打包出来的.exe名称” “要打包的网页地址”</p>
+<h3 id="4、打包完成"><a href="#4、打包完成" class="headerlink" title="4、打包完成"></a>4、打包完成</h3><p>打包完成后进入你刚刚新建的文件夹就会显示了。<br>这时候在目录下面可以看到生成完成的软件<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521128630/QQ%E6%88%AA%E5%9B%BE20230204221940.png" srcset="/img/loading.gif" lazyload><br>点击exe文件即可运行，但是这种应用包的形式还不是最后的效果，我们需要一个可以安装的exe文件，这就需要进行安装程序打包，具体可以参考下面的教程。</p>
+<h3 id="打包可安装程序"><a href="#打包可安装程序" class="headerlink" title="打包可安装程序"></a>打包可安装程序</h3><p>首先需要下载Inno Setup Compiler<br><a target="_blank" rel="noopener" href="https://wpqingfeng.lanzouf.com/iltOB0mmfhah">高速下载地址</a></p>
+<h4 id="打包步骤"><a href="#打包步骤" class="headerlink" title="打包步骤"></a>打包步骤</h4><p>点击file -&gt; new 新建一个项目<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521145137/202206190045926.png" srcset="/img/loading.gif" lazyload><br>点击next</p>
+<p>![[202206190046856.png]]<br>按照提示依次输入程序名称，版本号，发布者，程序地址，点击Next</p>
+<p><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521160217/QQ%E6%88%AA%E5%9B%BE20230204222428.png" srcset="/img/loading.gif" lazyload><br>输入安装目录名称（这会在安装的时候在安装者电脑新建），点击Next<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521171778/202206190049597.png" srcset="/img/loading.gif" lazyload></p>
+<p>然后输入exe的目录信息，然后Next<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521187269/QQ%E6%88%AA%E5%9B%BE20230204222623.png" srcset="/img/loading.gif" lazyload><br>输入程序名称，然后Next<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521205438/QQ%E6%88%AA%E5%9B%BE20230204222701.png" srcset="/img/loading.gif" lazyload><br>后面一直点击next，如果要修改图标可以在如下这个界面修改<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521219084/202206190108072.png" srcset="/img/loading.gif" lazyload><br>继续Next，直到显示finish，然后点击finish<br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521230828/202206190110710.png" srcset="/img/loading.gif" lazyload></p>
+<p>显示是否编译程序，点击<code>是</code><br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521253641/QQ%E6%88%AA%E5%9B%BE20230204222814.png" srcset="/img/loading.gif" lazyload><br><img src="https://saas.bk-cdn.com/t/a9b88640-6527-4912-9ebb-231fa84466df/u/2dd92426-c768-4841-8a7a-cd109cb78c6b/1675521267259/QQ%E6%88%AA%E5%9B%BE20230204222829.png" srcset="/img/loading.gif" lazyload><br>打开文件生成路径，就可以看到生成的APP了!</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>如何利用electron-nativefier将网站打包成.exe，可安装，详细教程</div>
+      <div>http://example.com/2023/02/04/如何利用electron-nativefier将网站打包成-exe，可安装，详细教程/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>MyhOfficial</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>February 4, 2023</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/02/04/%E6%8A%80%E5%B7%A7%EF%BC%9A%E5%9B%BE%E8%A1%A8%E3%80%81%E6%AF%8D%E7%89%88%E5%92%8C%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="万字解析 | 今年一整年都会用得上的 PPT 技巧：图表、母版和快捷键">
+                        <span class="hidden-mobile">万字解析 | 今年一整年都会用得上的 PPT 技巧：图表、母版和快捷键</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
